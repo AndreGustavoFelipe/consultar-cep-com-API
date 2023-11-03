@@ -1,0 +1,32 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-image: url(img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    font-family: 'Abel', sans-serif;
+    font-family: 'Teko', sans-serif;
+    color: white;
+}
+
+.bg{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+p{
+    color: rgb(78, 78, 78);
+    font-size: 0.8em;
+}
+
+#title{
+    color: black;
+    font-size: 4em;
+    font-weight: normal;
+}

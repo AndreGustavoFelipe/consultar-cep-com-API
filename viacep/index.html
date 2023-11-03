@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VIACEP</title>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container position-absolute top-50 start-50 translate-middle">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="bg">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <p class="text-center mb-3 mt-3" id="title">VIACEP API</p>
+                            <label for="cep" style="color: black;">CEP</label>
+                            <input type="text" class="form-control mt-1" placeholder="Ex: 99999999" maxlength="8" id="inputCep" required>
+                            <p class="mt-1">Consultar utilizando API do site VIACEP</p>
+                        </div>
+                        <button onclick="consultarCEP()" type="button" class="btn btn-outline-primary btn-block mt-1 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Consultar</button>
+                      </form>              
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="resultadoModal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="color: black;">Resultado da Consulta</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal">
+                            <span arial-bs-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="color: black;">
+                        <div id="resultado"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    
+    <div class="alert alert-danger text-center" hidden id="alert" role="alert">
+      A simple danger alert—check it out!
+    </div>
+
+      
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
